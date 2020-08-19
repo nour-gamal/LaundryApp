@@ -185,25 +185,31 @@ body {
   right: 5px;
 }
 
-.details .card .pickTime .col-5 {
+.details .card .pickTime .pickupBox,
+.details .card .pickTime .dropOffBox {
   margin-top: 10px;
   cursor: pointer;
   border: 2px solid #ffbd69;
   border-radius: 10px;
 }
 
-.details .card .pickTime .col-5 span {
+.details .card .pickTime .pickupBox span,
+.details .card .pickTime .dropOffBox span {
   color: #ffbd69;
   font-size: 15px;
 }
 
-.details .card .pickTime .col-5 .pickUpDate,
-.details .card .pickTime .col-5 .dropOffDate {
+.details .card .pickTime .pickupBox .pickUpDate,
+.details .card .pickTime .pickupBox .dropOffDate,
+.details .card .pickTime .dropOffBox .pickUpDate,
+.details .card .pickTime .dropOffBox .dropOffDate {
   font-weight: 600;
 }
 
-.details .card .pickTime .col-5 .pickUpTime,
-.details .card .pickTime .col-5 .dropOffTime {
+.details .card .pickTime .pickupBox .pickUpTime,
+.details .card .pickTime .pickupBox .dropOffTime,
+.details .card .pickTime .dropOffBox .pickUpTime,
+.details .card .pickTime .dropOffBox .dropOffTime {
   font-weight: lighter;
   color: #c9c5c5;
 }
