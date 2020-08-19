@@ -26,6 +26,7 @@ body {
     padding: 3px 20px;
     border: 1px solid;
     border-radius: 20px;
+    margin-right: 20px;
     &:hover {
       background: $mainColor;
       color: #543864;
@@ -37,6 +38,7 @@ body {
     padding: 5px;
     background: #fff;
     border-radius: 50%;
+    margin-right: 10px;
   }
 }
 
@@ -107,6 +109,8 @@ body {
   .col-1 {
     color: $mainColor;
     font-size: 15px;
+    padding-left: 0;
+
     span {
       background-color: $mainColor;
       color: $pearlColor;
