@@ -1,0 +1,279 @@
+/*Start frameWork And Global Ruled*/
+$mainColor: #ffbd69;
+$pearlColor: #ececec;
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #543864;
+  color: $pearlColor;
+}
+.toUpperCase {
+  text-transform: uppercase;
+}
+
+/*End frameWork And Global Ruled*/
+/*Start of NavBar header Section*/
+.navbar {
+  background: #222831;
+  color: $mainColor;
+  cursor: pointer;
+  .brandName {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+  }
+  .login {
+    padding: 3px 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    &:hover {
+      background: $mainColor;
+      color: #543864;
+    }
+  }
+  .fa-canadian-maple-leaf {
+    color: #cf2a1d;
+    font-size: 30px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+  }
+}
+
+/*End of NavBar header Section*/
+.mainBody {
+  display: none;
+}
+/*Start LandingPage Section*/
+.landingPage {
+  padding: 130px 0;
+  font-family: "Caveat", cursive;
+  color: $mainColor;
+  font-size: 50px;
+  background: url("/Images/LandingPage.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  button {
+    background-color: transparent;
+    border: none;
+    border: 1px solid $mainColor;
+    color: $mainColor;
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 0 20px;
+    &:hover {
+      background: $mainColor;
+      color: #543864;
+    }
+  }
+}
+/*End LandingPage Section*/
+/*Start MainTitle Section*/
+.mainTitle {
+  .hiddenTextArea,
+  .hiddenTextCity,
+  .hiddenTextCountry,
+  button {
+    display: none;
+    margin: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+  button {
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid $mainColor;
+    background-color: transparent;
+    color: $pearlColor;
+    &:hover {
+      border: 1px solid $pearlColor;
+
+      color: $mainColor;
+    }
+  }
+  h6 {
+    color: $mainColor;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  .line {
+    height: 2px;
+    background-color: $mainColor;
+    margin-top: 15px;
+  }
+  .col-1 {
+    color: $mainColor;
+    font-size: 15px;
+    span {
+      background-color: $mainColor;
+      color: $pearlColor;
+      padding: 5px 12px;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    span.payment {
+      background: $pearlColor;
+      color: $mainColor;
+    }
+  }
+}
+/*End MainTitle Section*/
+/*Start Details Section*/
+.details {
+  margin-top: 20px;
+  .card {
+    background-color: #222831;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+    .packageIncluded {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid $mainColor;
+      div {
+        padding: 10px 0;
+        svg {
+          color: $mainColor;
+          border-radius: 50%;
+        }
+      }
+    }
+    .pickTime {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid $mainColor;
+      svg {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .col-5 {
+        margin-top: 10px;
+        cursor: pointer;
+        border: 2px solid $mainColor;
+        border-radius: 10px;
+        span {
+          color: $mainColor;
+          font-size: 15px;
+        }
+        .pickUpDate,
+        .dropOffDate {
+          font-weight: 600;
+        }
+        .pickUpTime,
+        .dropOffTime {
+          font-weight: lighter;
+          color: #c9c5c5;
+        }
+      }
+      input[type="date"],
+      input[type="time"] {
+        display: none;
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+    .instructions {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid $mainColor;
+      textarea {
+        width: 100%;
+        height: 100px;
+        resize: none;
+        background-color: $pearlColor;
+      }
+      button {
+        background: transparent;
+        border: none;
+        border-radius: 10px;
+        border: 1px solid $mainColor;
+        color: $pearlColor;
+        padding: 5px 20px;
+      }
+    }
+  }
+  .summary {
+    padding: 10px;
+    h6,
+    .h6 {
+      color: $mainColor;
+    }
+    & > div {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid $mainColor;
+    }
+    & > div:first-of-type {
+      span:nth-of-type(2) {
+        font-size: 15px;
+        font-weight: lighter;
+      }
+    }
+    & > div:nth-of-type(2) {
+      span {
+        font-size: 15px;
+        font-weight: lighter;
+      }
+    }
+    & > div:nth-of-type(3) {
+      div {
+        font-size: 15px;
+        font-weight: lighter;
+      }
+    }
+
+    & > div:nth-of-type(4) {
+      span:nth-of-type(2) {
+        font-size: 15px;
+        font-weight: lighter;
+        color: $mainColor;
+      }
+    }
+
+    & > div:nth-of-type(4) {
+      p {
+        font-size: 15px;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+/*End Details Section*/
+/*Start Footer Section*/
+footer {
+  padding: 20px 0;
+  background-color: #222831;
+  margin-bottom: 0;
+  .ourServices {
+    margin-bottom: 20px;
+  }
+  ul {
+    margin: auto;
+  }
+  ul.list-unstyled:first-of-type,
+  ul.list-unstyled:nth-of-type(2) {
+    li {
+      margin-left: 20px;
+      cursor: pointer;
+      float: left;
+    }
+  }
+
+  ul.list-unstyled:nth-of-type(2) {
+    li:last-of-type,
+    li:nth-of-type(4) {
+      color: $mainColor;
+    }
+  }
+}
+/*End Footer Section*/
