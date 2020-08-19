@@ -92,8 +92,8 @@ $(".landingPageBotton").on("click", function () {
 $(".brandName").on("click", function () {
   $(".landingPage").fadeIn(1000);
 
-  $(".card:first-of-type").fadeOut(1).css("left", "0");
-  $(".card:nth-of-type(2)").fadeOut(1).css("right", "0");
+  $(".card:first-of-type").fadeOut(1).css("left", "-1000px");
+  $(".card:nth-of-type(2)").fadeOut(1).css("right", "-1000px");
   $(".mainTitle").fadeOut(1);
 });
 /*End Handling the Landing Page */
