@@ -11,6 +11,12 @@ body {
 .toUpperCase {
   text-transform: uppercase;
 }
+@mixin transition($time) {
+  transition: all $time ease-in-out;
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+}
 
 /*End frameWork And Global Ruled*/
 /*Start of NavBar header Section*/
@@ -43,9 +49,6 @@ body {
 }
 
 /*End of NavBar header Section*/
-.mainBody {
-  display: none;
-}
 /*Start LandingPage Section*/
 .landingPage {
   padding: 133px 0;
@@ -75,6 +78,8 @@ body {
 /*End LandingPage Section*/
 /*Start MainTitle Section*/
 .mainTitle {
+  margin-bottom: 20px;
+  display: none;
   .hiddenTextArea,
   .hiddenTextCity,
   .hiddenTextCountry,
@@ -131,8 +136,18 @@ body {
 /*End MainTitle Section*/
 /*Start Details Section*/
 .details {
-  margin-top: 20px;
   .card {
+    @include transition(1s);
+    display: none;
+    padding: 10px;
+    &:first-of-type {
+      position: abolute;
+      left: -1000px;
+    }
+    &:nth-of-type(2) {
+      position: abolute;
+      right: -1000px;
+    }
     background-color: #222831;
     border-radius: 10px;
     margin-bottom: 60px;
@@ -207,6 +222,11 @@ body {
         border: 1px solid $mainColor;
         color: $pearlColor;
         padding: 5px 20px;
+        margin-top: 30px;
+        &:hover {
+          border: 1px solid $pearlColor;
+          color: $mainColor;
+        }
       }
     }
   }

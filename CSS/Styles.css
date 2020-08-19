@@ -48,10 +48,6 @@ body {
 }
 
 /*End of NavBar header Section*/
-.mainBody {
-  display: none;
-}
-
 /*Start LandingPage Section*/
 .landingPage {
   padding: 133px 0;
@@ -82,6 +78,11 @@ body {
 
 /*End LandingPage Section*/
 /*Start MainTitle Section*/
+.mainTitle {
+  margin-bottom: 20px;
+  display: none;
+}
+
 .mainTitle .hiddenTextArea,
 .mainTitle .hiddenTextCity,
 .mainTitle .hiddenTextCountry,
@@ -144,16 +145,28 @@ body {
 
 /*End MainTitle Section*/
 /*Start Details Section*/
-.details {
-  margin-top: 20px;
-}
-
 .details .card {
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  display: none;
+  padding: 10px;
   background-color: #222831;
   border-radius: 10px;
   margin-bottom: 60px;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.details .card:first-of-type {
+  position: abolute;
+  left: -1000px;
+}
+
+.details .card:nth-of-type(2) {
+  position: abolute;
+  right: -1000px;
 }
 
 .details .card .packageIncluded {
@@ -243,6 +256,12 @@ body {
   border: 1px solid #ffbd69;
   color: #ececec;
   padding: 5px 20px;
+  margin-top: 30px;
+}
+
+.details .card .instructions button:hover {
+  border: 1px solid #ececec;
+  color: #ffbd69;
 }
 
 .details .summary {

@@ -27,163 +27,156 @@
       </div>
     </header>
     <!--End of NavBar Section-->
-    <div class="mainBody">
-      <!--Start Main Title section-->
-      <section class="mainTitle">
-        <div class="container text-center">
-          <div class="row">
-            <input
-              type="text"
-              class="hiddenTextArea col-md-4 col-xs-12"
-              value=""
-              placeholder="Area"
-            />
-            <input
-              type="text"
-              class="hiddenTextCity col-md-4 col-xs-12"
-              value=""
-              placeholder="City"
-            />
-            <input
-              type="text"
-              class="hiddenTextCountry col-md-4 col-xs-12"
-              value=""
-              placeholder="Country"
-            />
+    <!--Start Main Title section-->
+    <section class="mainTitle">
+      <div class="container text-center">
+        <div class="row">
+          <input
+            type="text"
+            class="hiddenTextArea col-md-4 col-xs-12"
+            value=""
+            placeholder="Area"
+          />
+          <input
+            type="text"
+            class="hiddenTextCity col-md-4 col-xs-12"
+            value=""
+            placeholder="City"
+          />
+          <input
+            type="text"
+            class="hiddenTextCountry col-md-4 col-xs-12"
+            value=""
+            placeholder="Country"
+          />
+        </div>
+      </div>
+
+      <button class="hiddenButton text-center">
+        Submit
+      </button>
+      <h6 class="location text-center">
+        Click To Type your Location
+        <i class="fas fa-arrow-circle-down"></i>
+      </h6>
+      <h3 class="text-center">Date & Time</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <span>1</span>
+            Date/Time
+          </div>
+          <div class="col-10 line"></div>
+          <div class="col-1">
+            <span class="payment">2</span>
+            <div class="payment">Payment</div>
           </div>
         </div>
-
-        <button class="hiddenButton text-center">
-          Submit
-        </button>
-        <h6 class="location text-center">
-          Click To Type your Location
-          <i class="fas fa-arrow-circle-down"></i>
-        </h6>
-        <h3 class="text-center">Date & Time</h3>
-        <div class="container">
-          <div class="row">
-            <div class="col-1">
-              <span>1</span>
-              Date/Time
-            </div>
-            <div class="col-10 line"></div>
-            <div class="col-1">
-              <span class="payment">2</span>
-              <div class="payment">Payment</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--End Main Title Section-->
-      <!--Start details Section-->
-      <section class="details">
-        <div class="container">
-          <div class="row">
-            <div class="card col-md-6 col-xs-12">
-              <div class="packageIncluded">
-                <h5>What's Included ?</h5>
-                <div>
-                  <i class="fas fa-arrow-circle-right"></i> service fee & free
-                  delivery in 24 hours.
-                </div>
-                <div>
-                  <i class="fas fa-arrow-circle-right"></i> Pay after you get
-                  your items back.
-                </div>
-                <div>
-                  <i class="fas fa-arrow-circle-right"></i>
-
-                  Wash & Fold bag, small size starting LE 25; Press-Only bag
-                  small size starting LE 35. Dry cleaning is priced by item.
-                </div>
+      </div>
+    </section>
+    <!--End Main Title Section-->
+    <!--Start details Section-->
+    <section class="details">
+      <div class="container">
+        <div class="row">
+          <div class="card col-md-6 col-xs-12">
+            <div class="packageIncluded">
+              <h5>What's Included ?</h5>
+              <div>
+                <i class="fas fa-arrow-circle-right"></i> service fee & free
+                delivery in 24 hours.
               </div>
-              <div class="pickTime">
-                <h6>
-                  When would you like your pick-up and drop-off ? <br />
-                  (Click to change Time)
-                </h6>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-5 pickupBox">
-                      <span>Pick Up </span>
-                      <div class="pickUpDate"></div>
-                      <div class="pickUpTime"></div>
-                      <i class="fas fa-arrow-circle-right"></i>
-                      <div class="container">
-                        <div class="row">
-                          <input type="date" class="pickUpdateChanger col-12" />
-                          <input type="time" class="pickUptimeChanger col-12" />
-                        </div>
+              <div>
+                <i class="fas fa-arrow-circle-right"></i> Pay after you get your
+                items back.
+              </div>
+              <div>
+                <i class="fas fa-arrow-circle-right"></i>
+
+                Wash & Fold bag, small size starting LE 25; Press-Only bag small
+                size starting LE 35. Dry cleaning is priced by item.
+              </div>
+            </div>
+            <div class="pickTime">
+              <h6>
+                When would you like your pick-up and drop-off ? <br />
+                (Click to change Time)
+              </h6>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-5 pickupBox">
+                    <span>Pick Up </span>
+                    <div class="pickUpDate"></div>
+                    <div class="pickUpTime"></div>
+                    <i class="fas fa-arrow-circle-right"></i>
+                    <div class="container">
+                      <div class="row">
+                        <input type="date" class="pickUpdateChanger col-12" />
+                        <input type="time" class="pickUptimeChanger col-12" />
                       </div>
                     </div>
-                    <div class="col-md-5 offset-md-2 dropOffBox">
-                      <span>Drop Off</span>
-                      <div class="dropOffDate"></div>
-                      <div class="dropOffTime"></div>
-                      <i class="fas fa-arrow-circle-right"></i>
-                      <div class="container">
-                        <div class="row">
-                          <input
-                            type="date"
-                            class="dropOffdateChanger col-12"
-                          />
-                          <input
-                            type="time"
-                            class="dropOfftimeChanger col-12"
-                          />
-                        </div>
+                  </div>
+                  <div class="col-md-5 offset-md-2 dropOffBox">
+                    <span>Drop Off</span>
+                    <div class="dropOffDate"></div>
+                    <div class="dropOffTime"></div>
+                    <i class="fas fa-arrow-circle-right"></i>
+                    <div class="container">
+                      <div class="row">
+                        <input type="date" class="dropOffdateChanger col-12" />
+                        <input type="time" class="dropOfftimeChanger col-12" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="instructions">
-                <h6>Do you have any specific instructions?</h6>
-                <textarea
-                  placeholder="Example:Leave Outside, Wash Only , Iron only ..etc."
-                ></textarea>
-                <button class="float-right">Next</button>
+            </div>
+            <div class="instructions">
+              <h6>Do you have any specific instructions?</h6>
+              <textarea
+                placeholder="Example:Leave Outside, Wash Only , Iron only ..etc."
+              ></textarea>
+              <button class="float-right">Next</button>
+            </div>
+          </div>
+          <div class="card col-md-5 col-xs-12 offset-md-1 summary">
+            <div>
+              <span class="h6">City</span>
+              <span class="float-right city">Type your City above</span>
+            </div>
+            <div>
+              <h6>Date & Time</h6>
+              <div>
+                Pick Up
+                <span class="float-right pickUpSummary"></span>
+              </div>
+              <div>
+                Drop Off
+                <span class="float-right dropOffSummary"
+                  >Thu, Aug 21, 8 AM - 9 AM</span
+                >
               </div>
             </div>
-            <div class="card col-md-5 col-xs-12 offset-md-1 summary">
-              <div>
-                <span class="h6">City</span>
-                <span class="float-right city">Type your City above</span>
-              </div>
-              <div>
-                <h6>Date & Time</h6>
-                <div>
-                  Pick Up
-                  <span class="float-right pickUpSummary"></span>
-                </div>
-                <div>
-                  Drop Off
-                  <span class="float-right dropOffSummary"
-                    >Thu, Aug 21, 8 AM - 9 AM</span
-                  >
-                </div>
-              </div>
-              <div>
-                <h6>Addresses</h6>
-                <div class="address">Type your location above</div>
-              </div>
-              <div>
-                <h6>Price details</h6>
-                <span>Total</span>
-                <span class="float-right">To be Calculated</span>
-                <p>
-                  Total price will be calculated and charged after the
-                  appointment is completed. Discounts and voucher codes will be
-                  applied to final price.
-                </p>
-              </div>
+            <div>
+              <h6>Addresses</h6>
+              <div class="address">Type your location above</div>
+            </div>
+            <div>
+              <h6>Price details</h6>
+              <span>Total</span>
+              <span class="float-right">To be Calculated</span>
+              <p>
+                Total price will be calculated and charged after the appointment
+                is completed. Discounts and voucher codes will be applied to
+                final price.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      <!--End details Section-->
-    </div>
+      </div>
+    </section>
+    <!--End details Section-->
+
     <!--Starting Landing Page -->
     <section class="landingPage text-center">
       <h1>

@@ -82,13 +82,19 @@ $(".dropOffSummary").html(
 /*End Handling the Time/Date bar */
 /*Start Handling the Landing Page */
 $(".landingPageBotton").on("click", function () {
-  $(".mainBody").fadeIn(1000);
   $(".landingPage").css("display", "none");
+
+  $(".card:first-of-type").fadeIn(1).css("left", "0");
+  $(".card:nth-of-type(2)").fadeIn(1).css("right", "0");
+  $(".mainTitle").fadeIn(1000);
 });
 
 $(".brandName").on("click", function () {
   $(".landingPage").fadeIn(1000);
-  $(".mainBody").css("display", "none");
+
+  $(".card:first-of-type").fadeOut(1).css("left", "0");
+  $(".card:nth-of-type(2)").fadeOut(1).css("right", "0");
+  $(".mainTitle").fadeOut(1);
 });
 /*End Handling the Landing Page */
 
