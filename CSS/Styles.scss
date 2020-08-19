@@ -80,7 +80,6 @@ body {
   .hiddenTextCountry,
   button {
     display: none;
-    margin: auto;
     margin: 10px 0;
     border-radius: 10px;
   }
@@ -90,9 +89,10 @@ body {
     border: 1px solid $mainColor;
     background-color: transparent;
     color: $pearlColor;
+    margin-left: 45%;
+
     &:hover {
       border: 1px solid $pearlColor;
-
       color: $mainColor;
     }
   }

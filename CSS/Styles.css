@@ -87,7 +87,6 @@ body {
 .mainTitle .hiddenTextCountry,
 .mainTitle button {
   display: none;
-  margin: auto;
   margin: 10px 0;
   border-radius: 10px;
 }
@@ -98,6 +97,7 @@ body {
   border: 1px solid #ffbd69;
   background-color: transparent;
   color: #ececec;
+  margin-left: 45%;
 }
 
 .mainTitle button:hover {
