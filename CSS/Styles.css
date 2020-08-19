@@ -137,6 +137,11 @@ body {
   color: #ffbd69;
 }
 
+.mainTitle .col-1 div.payment {
+  position: absolute;
+  right: 10px;
+}
+
 /*End MainTitle Section*/
 /*Start Details Section*/
 .details {

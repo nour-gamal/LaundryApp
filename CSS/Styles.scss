@@ -110,7 +110,6 @@ body {
     color: $mainColor;
     font-size: 15px;
     padding-left: 0;
-
     span {
       background-color: $mainColor;
       color: $pearlColor;
@@ -122,6 +121,10 @@ body {
     span.payment {
       background: $pearlColor;
       color: $mainColor;
+    }
+    div.payment {
+      position: absolute;
+      right: 10px;
     }
   }
 }
