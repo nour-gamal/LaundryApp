@@ -19,6 +19,7 @@ body {
   background: #222831;
   color: #ffbd69;
   cursor: pointer;
+  z-index: 9999999999;
 }
 
 .navbar .brandName {
@@ -27,6 +28,7 @@ body {
 }
 
 .navbar .login {
+  display: none;
   padding: 3px 20px;
   border: 1px solid;
   border-radius: 20px;
@@ -48,6 +50,57 @@ body {
 }
 
 /*End of NavBar header Section*/
+.loginPage {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 999999999;
+  left: 0;
+  display: none;
+}
+
+.loginPage div {
+  position: absolute;
+  left: 40%;
+  top: 20vh;
+}
+
+.loginPage div form {
+  padding: 10px;
+  border: 2px solid #ffbd69;
+  border-radius: 20%;
+}
+
+.loginPage div form img {
+  border-radius: 50%;
+  -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+}
+
+.loginPage div form input,
+.loginPage div form button {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.loginPage div form button {
+  background-color: transparent;
+  border: none;
+  border: 1px solid #ffbd69;
+  color: #ffbd69;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.loginPage div form button:hover {
+  background: #ffbd69;
+  color: #543864;
+}
+
 /*Start LandingPage Section*/
 .landingPage {
   padding: 133px 0;

@@ -53,7 +53,7 @@ let dateInNumbers = parseInt(todayString.substring(8, 11));
 dateInNumbers = dateInNumbers + 1;
 $(".pickUpDate").html(todayString.substring(0, 15));
 $(".pickUpTime").html(
-  timeInNumbers + " :00" + " - " + (timeInNumbers + 1) + ":00"
+  timeInNumbers + ":00" + " - " + (timeInNumbers + 1) + ":00"
 );
 $(".dropOffDate").html(tomorrowString.substring(0, 15));
 
@@ -87,6 +87,7 @@ $(".landingPageBotton").on("click", function () {
   $(".card:first-of-type").fadeIn(1).css("left", "0");
   $(".card:nth-of-type(2)").fadeIn(1).css("right", "0");
   $(".mainTitle").fadeIn(1000);
+  $(".login").css("display", "inline");
 });
 
 $(".brandName").on("click", function () {
@@ -95,6 +96,7 @@ $(".brandName").on("click", function () {
   $(".card:first-of-type").fadeOut(1).css("left", "-1000px");
   $(".card:nth-of-type(2)").fadeOut(1).css("right", "-1000px");
   $(".mainTitle").fadeOut(1);
+  $(".login").fadeOut(1);
 });
 /*End Handling the Landing Page */
 
@@ -181,3 +183,33 @@ $(".dropOffdateChanger ,.dropOfftimeChanger").on("focusout", function () {
 });
 
 /*End Handling the input date and time */
+
+/*Start Handling login Page */
+var flag = 0;
+$(".login").on("click", function () {
+  $(".loginPage").fadeToggle(500);
+  if (flag == 0) {
+    $(document.body).css("height", "100vh");
+    $(document.body).css("overflow", "hidden");
+    flag = 1;
+  } else {
+    $(document.body).css("height", "100vh");
+    $(document.body).css("overflow", "visible");
+    flag = 0;
+  }
+});
+$(".submit").on("click", function (e) {
+  e.preventDefault();
+  $(".loginPage").fadeToggle(500);
+  if (flag == 0) {
+    $(document.body).css("height", "100vh");
+    $(document.body).css("overflow", "hidden");
+    flag = 1;
+  } else {
+    $(document.body).css("height", "100vh");
+    $(document.body).css("overflow", "visible");
+    flag = 0;
+  }
+});
+
+/*End Handling login Page */
