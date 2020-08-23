@@ -50,15 +50,16 @@ body {
 }
 
 /*End of NavBar header Section*/
+/*Start of login page*/
 .loginPage {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  height: 100ch;
   width: 100%;
+  height: inherit;
   position: absolute;
   top: 0;
-  z-index: 999999999;
   left: 0;
+  z-index: 999999999;
   display: none;
 }
 
@@ -80,6 +81,22 @@ body {
   display: block;
   margin: auto;
   margin-bottom: 10px;
+}
+
+.loginPage div.container form input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.loginPage div.container form input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.loginPage div.container form input::-ms-input-placeholder {
+  text-align: center;
+}
+
+.loginPage div.container form input::placeholder {
+  text-align: center;
 }
 
 .loginPage div.container form button {

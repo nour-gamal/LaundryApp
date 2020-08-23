@@ -5,7 +5,7 @@ $pearlColor: #ececec;
   box-sizing: border-box;
 }
 body {
-  background: #543864;
+  background: #2e2a30;
   color: $pearlColor;
 }
 .toUpperCase {
@@ -53,14 +53,15 @@ body {
 }
 
 /*End of NavBar header Section*/
+/*Start of login page*/
 .loginPage {
   backdrop-filter: blur(4px);
-  height: 100ch;
   width: 100%;
+  height: inherit;
   position: absolute;
   top: 0;
-  z-index: 999999999;
   left: 0;
+  z-index: 999999999;
   display: none;
   div.container {
     form {
@@ -77,6 +78,9 @@ body {
         display: block;
         margin: auto;
         margin-bottom: 10px;
+      }
+      input::placeholder {
+        text-align: center;
       }
       button {
         background-color: transparent;

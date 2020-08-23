@@ -188,13 +188,12 @@ $(".dropOffdateChanger ,.dropOfftimeChanger").on("focusout", function () {
 var flag = 0;
 $(".login").on("click", function () {
   $(".loginPage").fadeToggle(500);
+  $(".loginPage").css("height", $("html,body").innerHeight());
   if (flag == 0) {
-    $(document.body).css("height", "100ch");
-    $(document.body).css("overflow", "hidden");
+    $("html,body").css("overflow", "hidden");
     flag = 1;
   } else {
-    $(document.body).css("height", "100ch");
-    $(document.body).css("overflow", "visible");
+    $("html,body").css("overflow", "visible");
     flag = 0;
   }
 });
@@ -202,14 +201,15 @@ $(".submit").on("click", function (e) {
   e.preventDefault();
   $(".loginPage").fadeToggle(500);
   if (flag == 0) {
-    $(document.body).css("height", "100vh");
-    $(document.body).css("overflow", "hidden");
+    $("html,body").css("overflow", "hidden");
     flag = 1;
   } else {
-    $(document.body).css("height", "100vh");
-    $(document.body).css("overflow", "visible");
+    $("html,body").css("overflow", "visible");
     flag = 0;
   }
+});
+$(window).on("resize", function () {
+  $(".loginPage").css("height", $("html,body").innerHeight());
 });
 
 /*End Handling login Page */
