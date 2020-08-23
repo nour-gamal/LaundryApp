@@ -53,7 +53,7 @@ body {
 .loginPage {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
-  height: 100%;
+  height: 100vmax;
   width: 100%;
   position: absolute;
   top: 0;
@@ -62,32 +62,27 @@ body {
   display: none;
 }
 
-.loginPage div {
-  position: absolute;
-  left: 40%;
-  top: 20vh;
-}
-
-.loginPage div form {
+.loginPage div.container form {
+  margin: 160px auto;
   padding: 10px;
   border: 2px solid #ffbd69;
   border-radius: 20%;
 }
 
-.loginPage div form img {
+.loginPage div.container form img {
   border-radius: 50%;
   -webkit-transform: scale(0.5, 0.5);
           transform: scale(0.5, 0.5);
 }
 
-.loginPage div form input,
-.loginPage div form button {
+.loginPage div.container form input,
+.loginPage div.container form button {
   display: block;
   margin: auto;
   margin-bottom: 10px;
 }
 
-.loginPage div form button {
+.loginPage div.container form button {
   background-color: transparent;
   border: none;
   border: 1px solid #ffbd69;
@@ -96,7 +91,7 @@ body {
   padding: 0 20px;
 }
 
-.loginPage div form button:hover {
+.loginPage div.container form button:hover {
   background: #ffbd69;
   color: #543864;
 }
