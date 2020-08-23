@@ -186,7 +186,7 @@ $(".dropOffdateChanger ,.dropOfftimeChanger").on("focusout", function () {
 
 /*Start Handling login Page */
 var flag = 0;
-$(".login").on("click", function () {
+$(".login,.cross").on("click", function () {
   $(".loginPage").fadeToggle(500);
   $(".loginPage").css("height", $("html,body").innerHeight());
   if (flag == 0) {
@@ -197,6 +197,7 @@ $(".login").on("click", function () {
     flag = 0;
   }
 });
+
 $(".submit").on("click", function (e) {
   e.preventDefault();
   $(".loginPage").fadeToggle(500);

@@ -5,7 +5,7 @@ $pearlColor: #ececec;
   box-sizing: border-box;
 }
 body {
-  background: #2e2a30;
+  background: #543864;
   color: $pearlColor;
 }
 .toUpperCase {
@@ -58,14 +58,20 @@ body {
   backdrop-filter: blur(4px);
   width: 100%;
   height: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   z-index: 999999999;
   display: none;
   div.container {
     form {
-      margin: 160px auto;
+      margin: 25vh auto;
+      svg {
+        position: relative;
+        right: 25px;
+        top: -77px;
+        cursor: pointer;
+      }
       img {
         border-radius: 50%;
         transform: scale(0.5, 0.5);
