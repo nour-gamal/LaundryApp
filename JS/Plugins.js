@@ -185,29 +185,15 @@ $(".dropOffdateChanger ,.dropOfftimeChanger").on("focusout", function () {
 /*End Handling the input date and time */
 
 /*Start Handling login Page */
-var flag = 0;
+
 $(".login,.cross").on("click", function () {
   $(".loginPage").fadeToggle(500);
   $(".loginPage").css("height", $("html,body").innerHeight());
-  if (flag == 0) {
-    $("html,body").css("overflow", "hidden");
-    flag = 1;
-  } else {
-    $("html,body").css("overflow", "visible");
-    flag = 0;
-  }
 });
 
 $(".submit").on("click", function (e) {
   e.preventDefault();
   $(".loginPage").fadeToggle(500);
-  if (flag == 0) {
-    $("html,body").css("overflow", "hidden");
-    flag = 1;
-  } else {
-    $("html,body").css("overflow", "visible");
-    flag = 0;
-  }
 });
 $(window).on("resize", function () {
   $(".loginPage").css("height", $("html,body").innerHeight());
