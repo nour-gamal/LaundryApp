@@ -189,11 +189,11 @@ var flag = 0;
 $(".login").on("click", function () {
   $(".loginPage").fadeToggle(500);
   if (flag == 0) {
-    $(document.body).css("height", "100vh");
+    $(document.body).css("height", "100ch");
     $(document.body).css("overflow", "hidden");
     flag = 1;
   } else {
-    $(document.body).css("height", "100vh");
+    $(document.body).css("height", "100ch");
     $(document.body).css("overflow", "visible");
     flag = 0;
   }
