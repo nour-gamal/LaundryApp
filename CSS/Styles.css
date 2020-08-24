@@ -190,13 +190,8 @@ body {
   margin-top: 15px;
 }
 
-.mainTitle .col-1 {
+.mainTitle .step {
   color: #ffbd69;
-  font-size: 15px;
-  padding-left: 0;
-}
-
-.mainTitle .col-1 span {
   background-color: #ffbd69;
   color: #ececec;
   padding: 5px 12px;
@@ -205,14 +200,9 @@ body {
   cursor: pointer;
 }
 
-.mainTitle .col-1 span.payment {
-  background: #ececec;
+.mainTitle .step2 {
   color: #ffbd69;
-}
-
-.mainTitle .col-1 div.payment {
-  position: absolute;
-  right: 10px;
+  background-color: #ececec;
 }
 
 /*End MainTitle Section*/

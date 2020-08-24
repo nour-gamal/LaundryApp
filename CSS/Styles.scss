@@ -24,9 +24,7 @@ body {
   background: #222831;
   color: $mainColor;
   cursor: pointer;
-
   z-index: 9999999999;
-
   .brandName {
     font-family: "Caveat", cursive;
     font-size: 30px;
@@ -165,26 +163,18 @@ body {
     background-color: $mainColor;
     margin-top: 15px;
   }
-  .col-1 {
+  .step {
     color: $mainColor;
-    font-size: 15px;
-    padding-left: 0;
-    span {
-      background-color: $mainColor;
-      color: $pearlColor;
-      padding: 5px 12px;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-    span.payment {
-      background: $pearlColor;
-      color: $mainColor;
-    }
-    div.payment {
-      position: absolute;
-      right: 10px;
-    }
+    background-color: $mainColor;
+    color: $pearlColor;
+    padding: 5px 12px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .step2 {
+    color: $mainColor;
+    background-color: $pearlColor;
   }
 }
 /*End MainTitle Section*/
