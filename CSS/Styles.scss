@@ -107,7 +107,7 @@ body {
   padding: 133px 0;
   color: $mainColor;
   font-size: 50px;
-  background: url("/Images/LandingPage.jpg") center center no-repeat;
+  background: url("/Images/landingPage.jpg") center center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -184,14 +184,6 @@ body {
     @include transition(1s);
     display: none;
     padding: 10px;
-    &:first-of-type {
-      position: abolute;
-      left: -1000px;
-    }
-    &:nth-of-type(2) {
-      position: abolute;
-      right: -1000px;
-    }
     background-color: #222831;
     border-radius: 10px;
     margin-bottom: 60px;
