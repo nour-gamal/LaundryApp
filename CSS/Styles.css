@@ -7,6 +7,7 @@
 body {
   background: #543864;
   color: #ececec;
+  font-family: "Libre Caslon Display", serif;
 }
 
 .toUpperCase {
@@ -23,7 +24,7 @@ body {
 }
 
 .navbar .brandName {
-  font-family: "Caveat", cursive;
+  font-family: "Sofia", cursive;
   font-size: 30px;
 }
 
@@ -123,7 +124,6 @@ body {
 /*Start LandingPage Section*/
 .landingPage {
   padding: 133px 0;
-  font-family: "Caveat", cursive;
   color: #ffbd69;
   font-size: 50px;
   background: url("/Images/LandingPage.jpg") center center no-repeat;

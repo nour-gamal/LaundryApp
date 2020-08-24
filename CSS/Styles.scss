@@ -7,6 +7,7 @@ $pearlColor: #ececec;
 body {
   background: #543864;
   color: $pearlColor;
+  font-family: "Libre Caslon Display", serif;
 }
 .toUpperCase {
   text-transform: uppercase;
@@ -26,7 +27,7 @@ body {
   cursor: pointer;
   z-index: 9999999999;
   .brandName {
-    font-family: "Caveat", cursive;
+    font-family: "Sofia", cursive;
     font-size: 30px;
   }
   .login {
@@ -104,7 +105,6 @@ body {
 /*Start LandingPage Section*/
 .landingPage {
   padding: 133px 0;
-  font-family: "Caveat", cursive;
   color: $mainColor;
   font-size: 50px;
   background: url("/Images/LandingPage.jpg") center center no-repeat;
