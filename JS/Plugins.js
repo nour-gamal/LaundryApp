@@ -60,9 +60,6 @@ $(".brandName").on("click", function () {
 $(".summaryFooter").on("click", function () {
   $("#summaryCard").toggleClass("d-block summaryFade animate__backInUp");
 });
-$("#summaryCross").on("click", function () {
-  $("#summaryCard").toggleClass("d-block summaryFade animate__backInUp");
-});
 
 /*End Handling the Landing Page */
 
