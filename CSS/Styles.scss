@@ -46,6 +46,32 @@ body {
 }
 
 /*End of NavBar header Section*/
+/*Start of header Landing Page*/
+.landingPage {
+  padding: 136px 0;
+  color: $mainColor;
+  font-size: 50px;
+  background: url("/Images/landingPage.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  button {
+    background-color: transparent;
+    border: none;
+    border: 1px solid $mainColor;
+    color: $mainColor;
+    font-size: 30px;
+    border-radius: 20px;
+    padding: 0 20px;
+    &:hover {
+      background: $mainColor;
+      color: #543864;
+    }
+  }
+}
+/*End LandingPage Section*/
 /*Start of flying pages*/
 .signupPage,
 .loginPage,
@@ -101,31 +127,6 @@ body {
   }
 }
 /*End of flying pages*/
-.landingPage {
-  padding: 136px 0;
-  color: $mainColor;
-  font-size: 50px;
-  background: url("/Images/landingPage.jpg") center center no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-
-  button {
-    background-color: transparent;
-    border: none;
-    border: 1px solid $mainColor;
-    color: $mainColor;
-    font-size: 30px;
-    border-radius: 20px;
-    padding: 0 20px;
-    &:hover {
-      background: $mainColor;
-      color: #543864;
-    }
-  }
-}
-/*End LandingPage Section*/
 /*Start MainTitle Section*/
 .mainTitle {
   margin-bottom: 20px;
@@ -184,7 +185,7 @@ body {
     padding: 10px;
     background-color: #222831;
     border-radius: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     margin-left: 15px;
     margin-right: 15px;
     .packageIncluded {
@@ -341,4 +342,26 @@ footer {
     }
   }
 }
+/*Start Summary footer*/
+.summaryFooter {
+  color: $mainColor;
+  background: #222831;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+.summaryFade {
+  @media (max-width: 767px) {
+    position: fixed;
+    bottom: -17px;
+    left: -15px;
+  }
+}
+#summaryCross {
+  position: absolute;
+  right: 7px;
+}
+/*End summary footer*/
 /*End Footer Section*/

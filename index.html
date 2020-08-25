@@ -24,16 +24,26 @@
           </h1>
           <div class="col d-flex justify-content-center">
             <div class="signup hvr-grow">
-              Sign up <i class="fas fa-user-circle"></i>
+              Sign up <i class="fas fa-user-plus"></i>
             </div>
             <div class="login hvr-grow">
-              Log in <i class="fas fa-user-circle"></i>
+              Log in <i class="fas fa-sign-in-alt"></i>
             </div>
           </div>
         </div>
       </div>
     </header>
     <!--End of NavBar Section-->
+
+    <!--Starting Landing Page -->
+    <section class="landingPage text-center">
+      <h1>Wellcome to our Company Website</h1>
+      <button class="landingPageBotton">
+        CLick here to Start your journey
+      </button>
+    </section>
+    <!--Ending Landing Page -->
+
     <!------------------------------End of flying Pages------------------->
     <!--Start of signup Page-->
     <section class="signupPage">
@@ -243,8 +253,10 @@
             </div>
           </div>
           <div
-            class="card col-md-5 col-xs-12 offset-md-1 summary animate__animated"
+            id="summaryCard"
+            class="card col-md-5 offset-md-1 summary animate__animated d-none"
           >
+            <span id="summaryCross" class="d-md-none"><i class="fas fa-times"></i></span>
             <div>
               <span class="h6">City</span>
               <span class="float-right city">Type your City above</span>
@@ -281,18 +293,8 @@
       </div>
     </section>
     <!--End details Section-->
-
-    <!--Starting Landing Page -->
-    <section class="landingPage text-center">
-      <h1>Wellcome to our Company Website</h1>
-      <button class="landingPageBotton">
-        CLick here to Start your journey
-      </button>
-    </section>
-    <!--Ending Landing Page -->
-
     <!--Start Footer Section-->
-    <footer>
+    <footer class="d-md-block">
       <div class="container">
         <div class="row text-center ourServices">
           <div class="col-6">Deep Cleaning</div>
@@ -327,6 +329,9 @@
         </div>
       </div>
     </footer>
+    <section class="summaryFooter text-center d-none">
+      Click to see your order summary <i class="fas fa-arrow-circle-up"></i>
+    </section>
     <!--End Footer Section-->
 
     <!------------------------------------------Adding fireBase-------------------------------------------->

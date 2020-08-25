@@ -38,21 +38,32 @@ $(".locationSubmit").on("click", function (e) {
 $(".landingPageBotton").on("click", function () {
   $(".landingPage").css("display", "none");
   $(".card:first-of-type").fadeIn(1).addClass("animate__backInLeft");
-  $(".card:nth-of-type(2)").fadeIn(1).addClass("animate__backInRight");
+  $(".card:nth-of-type(2)").addClass("animate__backInRight d-md-block");
   $(".mainTitle").fadeIn(1000);
   $(".signup").css("display", "inline");
   $(".login").css("display", "inline");
+  $("footer").addClass("d-none");
+  $(".summaryFooter").removeClass("d-none").addClass("d-md-none");
 });
 
 $(".brandName").on("click", function () {
   $(".landingPage").fadeIn(1000);
-
   $(".card:first-of-type").fadeOut(1);
-  $(".card:nth-of-type(2)").fadeOut(1);
+  $(".card:nth-of-type(2)").removeClass("d-md-block");
   $(".mainTitle").fadeOut(1);
   $(".signup").fadeOut(1);
   $(".login").fadeOut(1);
+  $("footer").removeClass("d-none");
+  $(".summaryFooter").addClass("d-none").removeClass("d-md-none");
 });
+
+$(".summaryFooter").on("click", function () {
+  $("#summaryCard").toggleClass("d-block summaryFade animate__backInUp");
+});
+$("#summaryCross").on("click", function () {
+  $("#summaryCard").toggleClass("d-block summaryFade animate__backInUp");
+});
+
 /*End Handling the Landing Page */
 
 /*Start Handling the input date and time */
