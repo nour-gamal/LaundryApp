@@ -16,43 +16,41 @@ body {
 
 /*End frameWork And Global Ruled*/
 /*Start of NavBar header Section*/
-.navbar {
+.navbarr {
   background: #222831;
   color: #ffbd69;
   cursor: pointer;
-  z-index: 9999999999;
 }
 
-.navbar .brandName {
+.navbarr .brandName {
   font-family: "Sofia", cursive;
   font-size: 30px;
+  margin: 10px 0;
 }
 
-.navbar .login {
-  display: none;
-  padding: 3px 20px;
-  border: 1px solid;
+.navbarr .signup,
+.navbarr .login {
+  margin: 10px 10px;
+  color: #ffbd69;
+  border: 1px solid #ffbd69;
   border-radius: 20px;
-  margin-right: 20px;
+  padding: 0 10px;
+  display: none;
 }
 
-.navbar .login:hover {
+.navbarr .signup:hover,
+.navbarr .login:hover {
   background: #ffbd69;
   color: #543864;
 }
 
-.navbar .fa-canadian-maple-leaf {
-  color: #cf2a1d;
-  font-size: 30px;
-  padding: 5px;
-  background: #fff;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
 /*End of NavBar header Section*/
-/*Start of login page*/
-.loginPage {
+/*Start of flying pages*/
+.signupPage,
+.loginPage,
+.locationPage,
+.pickupPage,
+.dropoffPage {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   width: 100%;
@@ -64,66 +62,110 @@ body {
   display: none;
 }
 
-.loginPage div.container form {
+.signupPage div.container form,
+.loginPage div.container form,
+.locationPage div.container form,
+.pickupPage div.container form,
+.dropoffPage div.container form {
   margin: 25vh auto;
   padding: 10px;
   border: 2px solid #ffbd69;
   border-radius: 20%;
 }
 
-.loginPage div.container form svg {
+.signupPage div.container form svg,
+.loginPage div.container form svg,
+.locationPage div.container form svg,
+.pickupPage div.container form svg,
+.dropoffPage div.container form svg {
   position: relative;
   right: 25px;
   top: -77px;
   cursor: pointer;
 }
 
-.loginPage div.container form img {
+.signupPage div.container form img,
+.loginPage div.container form img,
+.locationPage div.container form img,
+.pickupPage div.container form img,
+.dropoffPage div.container form img {
   border-radius: 50%;
   -webkit-transform: scale(0.5, 0.5);
           transform: scale(0.5, 0.5);
 }
 
+.signupPage div.container form input,
+.signupPage div.container form button,
 .loginPage div.container form input,
-.loginPage div.container form button {
+.loginPage div.container form button,
+.locationPage div.container form input,
+.locationPage div.container form button,
+.pickupPage div.container form input,
+.pickupPage div.container form button,
+.dropoffPage div.container form input,
+.dropoffPage div.container form button {
   display: block;
   margin: auto;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
-.loginPage div.container form input::-webkit-input-placeholder {
+.signupPage div.container form input::-webkit-input-placeholder,
+.loginPage div.container form input::-webkit-input-placeholder,
+.locationPage div.container form input::-webkit-input-placeholder,
+.pickupPage div.container form input::-webkit-input-placeholder,
+.dropoffPage div.container form input::-webkit-input-placeholder {
   text-align: center;
 }
 
-.loginPage div.container form input:-ms-input-placeholder {
+.signupPage div.container form input:-ms-input-placeholder,
+.loginPage div.container form input:-ms-input-placeholder,
+.locationPage div.container form input:-ms-input-placeholder,
+.pickupPage div.container form input:-ms-input-placeholder,
+.dropoffPage div.container form input:-ms-input-placeholder {
   text-align: center;
 }
 
-.loginPage div.container form input::-ms-input-placeholder {
+.signupPage div.container form input::-ms-input-placeholder,
+.loginPage div.container form input::-ms-input-placeholder,
+.locationPage div.container form input::-ms-input-placeholder,
+.pickupPage div.container form input::-ms-input-placeholder,
+.dropoffPage div.container form input::-ms-input-placeholder {
   text-align: center;
 }
 
-.loginPage div.container form input::placeholder {
+.signupPage div.container form input::placeholder,
+.loginPage div.container form input::placeholder,
+.locationPage div.container form input::placeholder,
+.pickupPage div.container form input::placeholder,
+.dropoffPage div.container form input::placeholder {
   text-align: center;
 }
 
-.loginPage div.container form button {
+.signupPage div.container form button,
+.loginPage div.container form button,
+.locationPage div.container form button,
+.pickupPage div.container form button,
+.dropoffPage div.container form button {
   background-color: transparent;
   border: none;
   border: 1px solid #ffbd69;
   color: #ffbd69;
-  border-radius: 20px;
   padding: 0 20px;
 }
 
-.loginPage div.container form button:hover {
+.signupPage div.container form button:hover,
+.loginPage div.container form button:hover,
+.locationPage div.container form button:hover,
+.pickupPage div.container form button:hover,
+.dropoffPage div.container form button:hover {
   background: #ffbd69;
   color: #543864;
 }
 
-/*Start LandingPage Section*/
+/*End of flying pages*/
 .landingPage {
-  padding: 133px 0;
+  padding: 136px 0;
   color: #ffbd69;
   font-size: 50px;
   background: url("/Images/landingPage.jpg") center center no-repeat;

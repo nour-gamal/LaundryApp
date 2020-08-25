@@ -21,39 +21,37 @@ body {
 
 /*End frameWork And Global Ruled*/
 /*Start of NavBar header Section*/
-.navbar {
+.navbarr {
   background: #222831;
   color: $mainColor;
   cursor: pointer;
-  z-index: 9999999999;
   .brandName {
     font-family: "Sofia", cursive;
     font-size: 30px;
+    margin: 10px 0;
   }
+  .signup,
   .login {
-    display: none;
-    padding: 3px 20px;
-    border: 1px solid;
+    margin: 10px 10px;
+    color: $mainColor;
+    border: 1px solid $mainColor;
     border-radius: 20px;
-    margin-right: 20px;
+    padding: 0 10px;
+    display: none;
     &:hover {
       background: $mainColor;
       color: #543864;
     }
   }
-  .fa-canadian-maple-leaf {
-    color: #cf2a1d;
-    font-size: 30px;
-    padding: 5px;
-    background: #fff;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
 }
 
 /*End of NavBar header Section*/
-/*Start of login page*/
-.loginPage {
+/*Start of flying pages*/
+.signupPage,
+.loginPage,
+.locationPage,
+.pickupPage,
+.dropoffPage {
   backdrop-filter: blur(4px);
   width: 100%;
   height: inherit;
@@ -83,6 +81,7 @@ body {
         display: block;
         margin: auto;
         margin-bottom: 10px;
+        border-radius: 10px;
       }
       input::placeholder {
         text-align: center;
@@ -92,7 +91,6 @@ body {
         border: none;
         border: 1px solid $mainColor;
         color: $mainColor;
-        border-radius: 20px;
         padding: 0 20px;
         &:hover {
           background: $mainColor;
@@ -102,9 +100,9 @@ body {
     }
   }
 }
-/*Start LandingPage Section*/
+/*End of flying pages*/
 .landingPage {
-  padding: 133px 0;
+  padding: 136px 0;
   color: $mainColor;
   font-size: 50px;
   background: url("/Images/landingPage.jpg") center center no-repeat;

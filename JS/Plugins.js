@@ -1,44 +1,61 @@
 /*Start Handling the Address bar */
 $(".location").on("click", function () {
-  $(this).fadeOut(300, function () {
-    $(
-      ".hiddenTextArea,.hiddenTextCity,.hiddenTextCountry,.hiddenButton"
-    ).fadeIn(1000);
-  });
+  $(".locationPage").fadeIn(500);
+});
+$(".locationCross").on("click", function () {
+  $(".locationPage").fadeOut(500);
 });
 
-$(".hiddenButton").on("click", function () {
+$(".locationSubmit").on("click", function (e) {
+  e.preventDefault();
   if (
-    $(".hiddenTextArea").val() == "" ||
-    $(".hiddenTextCity").val() == "" ||
-    $(".hiddenTextCountry").val() == ""
+    $("#area").val() == "" ||
+    $("#city").val() == "" ||
+    $("#country").val() == ""
   ) {
     window.alert("please Fill In the fields below");
   } else {
     $(".location").html(
-      $(".hiddenTextArea").val() +
+      $("#area").val() +
         " , " +
-        $(".hiddenTextCity").val() +
+        $("#city").val() +
         " , " +
-        $(".hiddenTextCountry").val() +
+        $("#country").val() +
         ' <i class="fas fa-arrow-circle-down"></i>'
     );
-    $(
-      ".hiddenTextArea,.hiddenTextCity,.hiddenTextCountry,.hiddenButton"
-    ).fadeOut(1000, function () {
+    $(".locationPage").fadeOut(500, function () {
       $(".location").fadeIn(300);
     });
-    $(".city").html($(".hiddenTextCity").val());
+    $(".city").html($("#city").val());
     $(".address").html(
-      $(".hiddenTextArea").val() +
-        " , " +
-        $(".hiddenTextCity").val() +
-        " , " +
-        $(".hiddenTextCountry").val()
+      $("#area").val() + " , " + $("#city").val() + " , " + $("#country").val()
     );
   }
 });
 /*End Handling the Address bar */
+
+/*Start Handling the Landing Page */
+$(".landingPageBotton").on("click", function () {
+  $(".landingPage").css("display", "none");
+  $(".card:first-of-type").fadeIn(1).addClass("animate__backInLeft");
+  $(".card:nth-of-type(2)").fadeIn(1).addClass("animate__backInRight");
+  $(".mainTitle").fadeIn(1000);
+  $(".signup").css("display", "inline");
+  $(".login").css("display", "inline");
+});
+
+$(".brandName").on("click", function () {
+  $(".landingPage").fadeIn(1000);
+
+  $(".card:first-of-type").fadeOut(1);
+  $(".card:nth-of-type(2)").fadeOut(1);
+  $(".mainTitle").fadeOut(1);
+  $(".signup").fadeOut(1);
+  $(".login").fadeOut(1);
+});
+/*End Handling the Landing Page */
+
+/*Start Handling the input date and time */
 
 /*Start Handling the Time/Date bar */
 let today = new Date();
@@ -80,47 +97,20 @@ $(".dropOffSummary").html(
     ":00"
 );
 /*End Handling the Time/Date bar */
-/*Start Handling the Landing Page */
-$(".landingPageBotton").on("click", function () {
-  $(".landingPage").css("display", "none");
-  $(".card:first-of-type").fadeIn(1).addClass("animate__backInLeft");
-  $(".card:nth-of-type(2)").fadeIn(1).addClass("animate__backInRight");
-  $(".mainTitle").fadeIn(1000);
-  $(".login").css("display", "inline");
-});
-
-$(".brandName").on("click", function () {
-  $(".landingPage").fadeIn(1000);
-
-  $(".card:first-of-type").fadeOut(1);
-  $(".card:nth-of-type(2)").fadeOut(1);
-  $(".mainTitle").fadeOut(1);
-  $(".login").fadeOut(1);
-});
-/*End Handling the Landing Page */
-
-/*Start Handling the input date and time */
-
 /*Handling pickup Date and Time */
 
 $(".pickupBox").on("click", function () {
-  $(".pickUpDate,.pickUpTime").fadeOut(300, function () {
-    $(".pickUpdateChanger ,.pickUptimeChanger").fadeIn(300);
-  });
+  $(".pickupPage").fadeIn(500);
 });
-$(".pickUpdateChanger ,.pickUptimeChanger").on("focusout", function () {
+$(".pickupSubmit").on("click", function (e) {
+  e.preventDefault();
   if ($(".pickUpdateChanger").val() != "") {
     $(".pickUpDate").html($(".pickUpdateChanger").val());
-  } else {
+    $(".pickUpSummary").html($(".pickUpdateChanger").val());
   }
-  $(".pickUpdateChanger").fadeOut(300, function () {
-    $(".pickUpDate").fadeIn(300);
-  });
-
   if ($(".pickUptimeChanger").val() != "") {
     let choosenTimeString = $(".pickUptimeChanger").val();
     let choosenTimeInt = parseInt(choosenTimeString.substring(0, 3));
-    console.log(typeof choosenTimeInt);
     let nextchoosenTimeInt = choosenTimeInt + 1;
     $(".pickUpTime").html(
       choosenTimeInt + ":00" + " - " + nextchoosenTimeInt + ":00"
@@ -134,28 +124,25 @@ $(".pickUpdateChanger ,.pickUptimeChanger").on("focusout", function () {
         nextchoosenTimeInt +
         ":00"
     );
-  } else {
   }
-  $(".pickUptimeChanger").fadeOut(300, function () {
-    $(".pickUpTime").fadeIn(300);
-  });
+  $(".pickupPage").fadeOut(500);
+});
+$(".pickupCross").on("click", function () {
+  $(".pickupPage").fadeOut(500);
 });
 
 /*Handling dropOff Date and Time */
 
 $(".dropOffBox").on("click", function () {
-  $(".dropOffDate,.dropOffTime").fadeOut(300, function () {
-    $(".dropOffdateChanger ,.dropOfftimeChanger").fadeIn(300);
-  });
+  $(".dropoffPage").fadeIn(500);
 });
-$(".dropOffdateChanger ,.dropOfftimeChanger").on("focusout", function () {
+$(".dropoffSubmit").on("click", function (e) {
+  e.preventDefault();
   if ($(".dropOffdateChanger").val() != "") {
     $(".dropOffDate").html($(".dropOffdateChanger").val());
+    $(".dropOffSummary").html($(".dropOffdateChanger").val());
   } else {
   }
-  $(".dropOffdateChanger").fadeOut(300, function () {
-    $(".dropOffDate").fadeIn(300);
-  });
 
   if ($(".dropOfftimeChanger").val() != "") {
     let choosenTimeString = $(".dropOfftimeChanger").val();
@@ -175,25 +162,68 @@ $(".dropOffdateChanger ,.dropOfftimeChanger").on("focusout", function () {
     );
   } else {
   }
-
-  $(".dropOfftimeChanger").fadeOut(300, function () {
-    $(".dropOffTime").fadeIn(300);
-  });
+  $(".dropoffPage").fadeOut(500);
+});
+$(".dropoffCross").on("click", function () {
+  $(".dropoffPage").fadeOut(500);
 });
 
 /*End Handling the input date and time */
 
 /*Start Handling login Page */
 
-$(".login,.cross").on("click", function () {
+$(".signup,.signupCross").on("click", function () {
+  $(".signupPage").fadeToggle(500);
+  $(".signupPage").css("height", $("html,body").innerHeight());
+});
+$(".login,.loginCross").on("click", function () {
   $(".loginPage").fadeToggle(500);
   $(".loginPage").css("height", $("html,body").innerHeight());
 });
-
-$(".submit").on("click", function (e) {
+$(".signupSubmit").on("click", function (e) {
   e.preventDefault();
-  $(".loginPage").fadeToggle(500);
+  let email = $("#signupEmail").val();
+  let password = $("#signupPassword").val();
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(function (result) {
+      $(".signupPage").fadeOut(1);
+      $(".signup").fadeOut(1);
+    })
+    .catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage);
+    });
 });
+
+$(".loginSubmit").on("click", function (e) {
+  e.preventDefault();
+  let email = $("#loginEmail").val();
+  let password = $("#loginPassword").val();
+  // Set the tenant ID on Auth instance.
+  firebase.auth().tenantId = null;
+
+  // All future sign-in request now include tenant ID.
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then(function (result) {
+      // result.user.tenantId should be ‘TENANT_PROJECT_ID’.
+      $(".loginPage").fadeOut(1);
+      $(".login").fadeOut(1);
+      $(".signup").fadeOut(1);
+    })
+    .catch(function (error) {
+      // Handle error.
+      var errorMessage = error.message;
+
+      alert(errorMessage);
+    });
+});
+
 $(window).on("resize", function () {
   $(".loginPage").css("height", $("html,body").innerHeight());
 });
