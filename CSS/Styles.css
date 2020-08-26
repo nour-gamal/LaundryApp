@@ -37,7 +37,8 @@ body {
 /*Start of header Landing Page*/
 .landingPage {
   color: #ffbd69;
-  padding: 22.8vmin 0;
+  height: calc(100vh - 234px);
+  padding-top: 20vh;
 }
 
 .landingPage .signup,
@@ -63,8 +64,8 @@ body {
 .locationPage,
 .pickupPage,
 .dropoffPage {
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
   width: 100%;
   height: inherit;
   position: fixed;
@@ -83,7 +84,6 @@ body {
   padding: 10px;
   border: 2px solid #ffbd69;
   border-radius: 20%;
-  width: 60%;
 }
 
 .signupPage div.container form svg,
@@ -93,8 +93,8 @@ body {
 .dropoffPage div.container form svg {
   cursor: pointer;
   position: relative;
-  top: -39px;
-  right: -446px;
+  top: -56px;
+  left: -13px;
 }
 
 .signupPage div.container form img,
@@ -105,8 +105,6 @@ body {
   border-radius: 50%;
   -webkit-transform: scale(0.5, 0.5);
           transform: scale(0.5, 0.5);
-  position: relative;
-  left: 232px;
 }
 
 .signupPage div.container form input,
