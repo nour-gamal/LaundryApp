@@ -17,30 +17,19 @@
   <body>
     <!--Start of NavBar header Section-->
     <header class="navbarr toUpperCase">
-      <div class="container-fluid">
-        <div class="row">
-          <h1 class="brandName col-md-12 d-flex justify-content-center">
-            Brand Name
-          </h1>
-          <div class="col d-flex justify-content-center">
-            <div class="signup hvr-grow">
-              Sign up <i class="fas fa-user-plus"></i>
-            </div>
-            <div class="login hvr-grow">
-              Log in <i class="fas fa-sign-in-alt"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1 class="brandName d-flex justify-content-center">Brand Name</h1>
     </header>
     <!--End of NavBar Section-->
 
     <!--Starting Landing Page -->
     <section class="landingPage text-center">
       <h1>Wellcome to our Company Website</h1>
-      <button class="landingPageBotton">
-        CLick here to Start your journey
-      </button>
+      <div class="signup hvr-grow">
+        Sign up <i class="fas fa-user-plus"></i>
+      </div>
+      <div class="login hvr-grow">
+        Log in <i class="fas fa-sign-in-alt"></i>
+      </div>
     </section>
     <!--Ending Landing Page -->
 
@@ -249,7 +238,7 @@
               <textarea
                 placeholder="Example:Leave Outside, Wash Only , Iron only ..etc."
               ></textarea>
-              <button class="float-right">Next</button>
+              <button id="next" class="float-right">Next</button>
             </div>
           </div>
           <div
@@ -268,9 +257,7 @@
               </div>
               <div>
                 Drop Off
-                <span class="float-right dropOffSummary"
-                  >Thu, Aug 21, 8 AM - 9 AM</span
-                >
+                <span class="float-right dropOffSummary"></span>
               </div>
             </div>
             <div>

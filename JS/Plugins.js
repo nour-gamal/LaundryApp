@@ -46,17 +46,6 @@ $(".landingPageBotton").on("click", function () {
   $(".summaryFooter").removeClass("d-none").addClass("d-md-none");
 });
 
-$(".brandName").on("click", function () {
-  $(".landingPage").fadeIn(1000);
-  $(".card:first-of-type").fadeOut(1);
-  $(".card:nth-of-type(2)").removeClass("d-md-block");
-  $(".mainTitle").fadeOut(1);
-  $(".signup").fadeOut(1);
-  $(".login").fadeOut(1);
-  $("footer").removeClass("d-none");
-  $(".summaryFooter").addClass("d-none").removeClass("d-md-none");
-});
-
 $(".summaryFooter").on("click", function () {
   $("#summaryCard").toggleClass("d-block summaryFade animate__backInUp");
 });
@@ -206,14 +195,12 @@ $(".signupSubmit").on("click", function (e) {
       alert(errorMessage);
     });
 });
-
 $(".loginSubmit").on("click", function (e) {
   e.preventDefault();
   let email = $("#loginEmail").val();
   let password = $("#loginPassword").val();
   // Set the tenant ID on Auth instance.
   firebase.auth().tenantId = null;
-
   // All future sign-in request now include tenant ID.
   firebase
     .auth()
@@ -223,6 +210,14 @@ $(".loginSubmit").on("click", function (e) {
       $(".loginPage").fadeOut(1);
       $(".login").fadeOut(1);
       $(".signup").fadeOut(1);
+      $(".landingPage").css("display", "none");
+      $(".card:first-of-type").fadeIn(1).addClass("animate__backInLeft");
+      $(".card:nth-of-type(2)").addClass("animate__backInRight d-md-block");
+      $(".mainTitle").fadeIn(1000);
+      $(".signup").css("display", "inline");
+      $(".login").css("display", "inline");
+      $("footer").addClass("d-none");
+      $(".summaryFooter").removeClass("d-none").addClass("d-md-none");
     })
     .catch(function (error) {
       // Handle error.
@@ -232,8 +227,21 @@ $(".loginSubmit").on("click", function (e) {
     });
 });
 
-$(window).on("resize", function () {
-  $(".loginPage").css("height", $("html,body").innerHeight());
-});
-
 /*End Handling login Page */
+$("#next").on("click", function () {
+  var db = firebase.firestore();
+  //Add a second document with a generated ID.
+  db.collection(firebase.auth().W)
+    .add({
+      pickup: $(".pickUpSummary").text(),
+      dropoff: $(".dropOffSummary").text(),
+      instructions: $("textarea").val(),
+      address: $(".address").text(),
+    })
+    .then(function (docRef) {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function (error) {
+      console.error("Error adding document: ", error);
+    });
+});
