@@ -39,6 +39,7 @@ body {
   color: #ffbd69;
   height: calc(100vh - 234px);
   padding-top: 20vh;
+  padding-bottom: 44vh;
 }
 
 .landingPage .signup,
