@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brand Name</title>
+    <title>The Laundry</title>
+    <link rel="icon" href="/Images/icon.png" />
     <link rel="stylesheet" href="/CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="/CSS/Styles.css" />
     <link rel="stylesheet" href="/CSS/hover-min.css" />
@@ -17,13 +18,22 @@
   <body>
     <!--Start of NavBar header Section-->
     <header class="navbarr toUpperCase">
-      <h1 class="brandName d-flex justify-content-center">Brand Name</h1>
+      <div class="container">
+        <div class="row">
+          <h1 class="brandName col-9 d-flex justify-content-start">
+            The Laundry
+          </h1>
+          <span class="col-3 d-flex justify-content-end"
+            ><button id="logoutButton">logout</button></span
+          >
+        </div>
+      </div>
     </header>
     <!--End of NavBar Section-->
 
     <!--Starting Landing Page -->
     <section class="landingPage text-center">
-      <h1>Wellcome to our Company Website</h1>
+      <h1>Wellcome to The Laundry</h1>
       <div class="signup hvr-grow">
         Sign up <i class="fas fa-user-plus"></i>
       </div>
@@ -58,7 +68,12 @@
               placeholder="Password"
               id="signupPassword"
             />
-            <button class="signupSubmit">Sign Up</button>
+            <button class="signupSubmit">
+              <span class="loading"></span>
+              <span class="loading"></span>
+              <span class="loading"></span>
+              <span class="signupp">Sign up</span>
+            </button>
           </form>
         </div>
       </div>
@@ -87,7 +102,12 @@
               placeholder="Password"
               id="loginPassword"
             />
-            <button class="loginSubmit">Login</button>
+            <button class="loginSubmit">
+              <span class="loading"></span>
+              <span class="loading"></span>
+              <span class="loading"></span>
+              <span class="loginn">Login</span>
+            </button>
           </form>
         </div>
       </div>
@@ -165,6 +185,15 @@
       </div>
     </section>
     <!--End dropoff time/date Page-->
+    <!--Start final Page-->
+    <section class="finalPage">
+      <div class="text-center">
+        <h2>Thanks for your trust !</h2>
+        <h3>We will finish your order and notify you on time .</h3>
+        <button id="logoutButtonFinal">Logout</button>
+      </div>
+    </section>
+    <!--End final Page-->
 
     <!------------------------------End of flying Pages------------------->
     <!--Start Main Title section-->
@@ -177,7 +206,7 @@
       <div class="container">
         <div class="row">
           <div class="col-1 d-flex justify-content-center">
-            <span class="step">1</span>
+            <span class="step step1">1</span>
           </div>
           <div class="col-10 line d-flex justify-content-center"></div>
           <div class="col-1 d-flex justify-content-center">
@@ -193,7 +222,8 @@
     <section class="details">
       <div class="container">
         <div class="row">
-          <div class="card col-md-6 col-xs-12, animate__animated">
+          <!--Main Card-->
+          <div id="maincard" class="card col-md-6 col-xs-12 animate__animated">
             <div class="packageIncluded">
               <h5>What's Included ?</h5>
               <div>
@@ -241,9 +271,173 @@
               <button id="next" class="float-right">Next</button>
             </div>
           </div>
+          <!--End of main card-->
+          <!--Start of payment card-->
+          <div class="card paymentCard col-md-6 col-xs-12 animate__animated">
+            <div>
+              <h4 class="text-center">Choose your services</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <label> Deep Cleaning ( 10 LE / Order )</label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="0"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label> Home Cleaning ( 15 LE / Order ) </label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="1"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label>Carpet Cleaning ( 12 LE / Order ) </label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="2"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label> Mattress Cleaning ( 17 LE / Order ) </label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="3"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label> Sofa Cleaning ( 19 LE / Order ) </label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="4"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label> Curtain Cleaning ( 29 LE / Order ) </label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="5"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label> Full Time Maid Services ( 230 LE / Order ) </label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="6"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label> Dry Cleaning/Laundry ( 28 LE / Order )</label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="7"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+                <li>
+                  <label>A/C Cleaning Disinfection ( 30 LE / Order )</label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="8"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+
+                <li>
+                  <label> Service Household Chores ( 260 LE / Order ) </label>
+                  <input
+                    class="float-right orderedItem"
+                    data-class="9"
+                    type="number"
+                    value="0"
+                    min="0"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="paymentoptions">
+              <h4 class="text-center">Type your payment informations</h4>
+              <form id="paymentform">
+                <div class="container">
+                  <div class="row">
+                    <span class="col-4">
+                      <input type="radio" name="paymentType" checked />
+                      <i class="fab fa-cc-visa fa-2x"></i>
+                    </span>
+                    <span class="col-4">
+                      <input type="radio" name="paymentType" />
+                      <i class="fab fa-cc-mastercard fa-2x"></i>
+                    </span>
+                    <span class="col-4">
+                      <input type="radio" name="paymentType" id="cash" />
+                      <i class="fas fa-money-bill-alt fa-2x"></i>
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="Card Number"
+                      class="offset-1"
+                      required
+                    />
+                    <input
+                      type="text"
+                      placeholder="CVV"
+                      class="col-2"
+                      required
+                    />
+                    <input
+                      type="number"
+                      placeholder="MM"
+                      min="1"
+                      max="12"
+                      required
+                    />
+                    <input
+                      type="number"
+                      placeholder="YYYY"
+                      min="2020"
+                      max="2030"
+                      required
+                    />
+                    <button type="submit" class="col-12 toUpperCase">
+                      Pay Now
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <button class="float-right" id="back">Back</button>
+          </div>
+          <!--End of payment card-->
+
+          <!--Start of summary card-->
           <div
-            id="summaryCard"
             class="card col-md-5 offset-md-1 summary animate__animated d-none"
+            id="summaryCard"
           >
             <div>
               <span class="h6">City</span>
@@ -267,7 +461,7 @@
             <div>
               <h6>Price details</h6>
               <span>Total</span>
-              <span class="float-right">To be Calculated</span>
+              <span class="float-right" id="finalPrice">To be Calculated</span>
               <p>
                 Total price will be calculated and charged after the appointment
                 is completed. Discounts and voucher codes will be applied to
@@ -275,6 +469,7 @@
               </p>
             </div>
           </div>
+          <!--End of summary card-->
         </div>
       </div>
     </section>
