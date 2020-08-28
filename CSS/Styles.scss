@@ -222,19 +222,16 @@ body {
   display: none;
   div {
     color: $mainColor;
-    position: absolute;
-    top: 30vh;
-    left: 30vw;
+    margin: 40vh auto;
     button {
       border: 1px solid $mainColor;
-      background: $pearlColor;
+      background: $mainColor;
+      color: $pearlColor;
       padding: 2px 20px;
-      color: $mainColor;
       border-radius: 10px;
       &:hover {
-        background: $mainColor;
-        padding: 2px 20px;
-        color: $pearlColor;
+        background: $pearlColor;
+        color: $mainColor;
       }
     }
   }

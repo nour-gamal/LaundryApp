@@ -349,23 +349,20 @@ body {
 
 .finalPage div {
   color: #ffbd69;
-  position: absolute;
-  top: 30vh;
-  left: 30vw;
+  margin: 40vh auto;
 }
 
 .finalPage div button {
   border: 1px solid #ffbd69;
-  background: #ececec;
+  background: #ffbd69;
+  color: #ececec;
   padding: 2px 20px;
-  color: #ffbd69;
   border-radius: 10px;
 }
 
 .finalPage div button:hover {
-  background: #ffbd69;
-  padding: 2px 20px;
-  color: #ececec;
+  background: #ececec;
+  color: #ffbd69;
 }
 
 /*End of flying pages*/
